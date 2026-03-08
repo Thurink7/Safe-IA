@@ -1,0 +1,31 @@
+{
+  "name": "safe-ia",
+  "version": "1.0.0",
+  "description": "MVP da plataforma Safe IA para proteção contra violência digital, deepfakes e chantagem online.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "keywords": [
+    "safe-ia",
+    "violencia-digital",
+    "deepfake",
+    "evidencias-digitais",
+    "seguranca"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.2.1",
+    "mime-types": "^2.1.35",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
