@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/image-removebg-preview.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard de Casos - Safe IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="si-navbar">
+      <div class="si-container si-navbar-inner">
+        <div class="si-logo">
+          <span class="si-logo-mark">Safe</span><span class="si-logo-mark-alt">IA</span>
+        </div>
+        <button class="si-menu-toggle" id="menu-toggle">
+          ☰
+        </button>
+        <nav class="si-nav-links" id="nav-links">
+          <a href="index.html" >Início</a>
+          <a href="deepfake.html">Verificador de Deepfake</a>
+          <a href="registrar.html">Registrar Caso</a>
+          <a href="apoio.html">Central de Apoio</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="dashboard.html" class="si-nav-pill is-active">Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+
+    <main class="si-page">
+      <section class="si-section">
+        <div class="si-container">
+          <div class="si-section-header">
+            <div>
+              <h1>Dashboard de casos registrados</h1>
+              <p class="si-section-intro">
+                Visualização simples dos casos registrados localmente. Útil para demonstração de fluxo e organização de
+                evidências.
+              </p>
+            </div>
+            <button id="refresh-btn" class="si-btn si-btn-outline">Atualizar lista</button>
+          </div>
+
+          <div class="si-table-wrapper">
+            <table class="si-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Data</th>
+                  <th>Tipo de conteúdo</th>
+                  <th>Arquivo</th>
+                  <th>Origem</th>
+                </tr>
+              </thead>
+              <tbody id="cases-tbody">
+                <tr>
+                  <td colspan="5">Carregando casos...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="si-footer-small">
+            As informações exibidas aqui são apenas metadados. O conteúdo das evidências não é exibido para proteção e
+            privacidade.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="si-footer">
+      <div class="si-container si-footer-inner">
+        <p>Safe IA — Dashboard local de demonstração.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
+

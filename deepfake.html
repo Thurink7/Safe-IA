@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/image-removebg-preview.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verificador de Deepfake - Safe IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="si-navbar">
+      <div class="si-container si-navbar-inner">
+        <div class="si-logo">
+          <span class="si-logo-mark">Safe</span><span class="si-logo-mark-alt">IA</span>
+        </div>
+        <button class="si-menu-toggle" id="menu-toggle">
+          ☰
+        </button>
+        <nav class="si-nav-links" id="nav-links">
+          <a href="index.html">Início</a>
+          <a href="deepfake.html" class="is-active">Verificador de Deepfake</a>
+          <a href="registrar.html">Registrar Caso</a>
+          <a href="apoio.html">Central de Apoio</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="dashboard.html" class="si-nav-pill">Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+
+    <main class="si-page">
+      <section class="si-section">
+        <div class="si-container si-section-grid-2">
+          <div>
+            <h1>Verificador de possível deepfake</h1>
+            <p>
+              Envie uma imagem, vídeo ou print suspeito. A Safe IA fará uma análise simulada para indicar se há sinais
+              de possível manipulação ou risco.
+            </p>
+            <form id="deepfake-form" class="si-form-card">
+              <div class="si-form-group">
+                <label for="evidence">Arquivo de evidência (imagem, vídeo ou PDF)</label>
+                <input type="file" id="evidence" name="evidence" accept="image/*,video/*,application/pdf" required />
+                <small>Limite de 10MB. Não compartilhe este link publicamente.</small>
+              </div>
+              <button type="submit" class="si-btn si-btn-primary">Analisar conteúdo</button>
+              <p class="si-form-note">
+                A análise é <strong>simulada</strong> e não substitui parecer técnico pericial, mas ajuda a organizar
+                evidências e próximos passos.
+              </p>
+            </form>
+          </div>
+
+          <div>
+            <div id="analysis-result" class="si-result-card si-result-card-muted">
+              <h2>Resultado da análise</h2>
+              <p class="si-result-subtitle">Envie um arquivo para visualizar o resultado.</p>
+              <div class="si-result-status">
+                <span class="si-badge si-badge-neutral">Aguardando análise</span>
+              </div>
+              <dl class="si-result-meta">
+                <div>
+                  <dt>Arquivo</dt>
+                  <dd id="result-file">—</dd>
+                </div>
+                <div>
+                  <dt>Hash SHA-256</dt>
+                  <dd id="result-hash" class="si-code">—</dd>
+                </div>
+                <div>
+                  <dt>Nível de risco (simulado)</dt>
+                  <dd id="result-label">—</dd>
+                </div>
+              </dl>
+              <div id="result-next-steps" class="si-result-next-steps hidden">
+                <h3>Próximos passos recomendados</h3>
+                <ul class="si-list-bullets" id="result-next-steps-list"></ul>
+                <a href="registrar.html" class="si-btn si-btn-outline si-btn-fullwidth"
+                  >Registrar evidência e gerar relatório</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="si-footer">
+      <div class="si-container si-footer-inner">
+        <p>Safe IA — Verificador de deepfake (simulado) para apoio à decisão.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="deepfake.js"></script>
+  </body>
+</html>
+
