@@ -52,8 +52,6 @@ O objetivo é transformar ameaças em **evidências digitais organizadas**, com 
 
 ### 2. Instalar dependências
 
-No diretório raiz do projeto (`c:\Users\ae700\Downloads\cursor` ou equivalente):
-
 ```bash
 npm install
 ```
